@@ -8,9 +8,9 @@ import javax.inject.Inject
 
 @HiltViewModel
 class PokemonViewModel @Inject constructor(
+    private var pokemonRepository:PokemonRepozitory
 ): ViewModel() {
 
-    private var pokemonRepository = PokemonRepozitory(App.retrofitClient)
-    fun fetchPokemon1() = pokemonRepository.fetchPokemon()
+    fun fetchPokemon() = pokemonRepository.fetchPokemon()
 
 }

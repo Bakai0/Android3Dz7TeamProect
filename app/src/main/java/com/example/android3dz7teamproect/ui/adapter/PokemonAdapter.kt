@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.android3dz7teamproect.databinding.ItemPokemonBinding
 import com.example.android3dz7teamproect.model.PokemonModel
-import com.example.android3dz7teamproect.model.PokemonResponce
 
 class PokemonAdapter :
     ListAdapter<PokemonModel, PokemonAdapter.PokemonViewHolder>(diffUtil) {

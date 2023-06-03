@@ -1,7 +1,5 @@
 package com.example.android3dz7teamproect.ui.fragment
 
-import android.annotation.SuppressLint
-import android.util.Log
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -10,8 +8,6 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.android3dz7teamproect.R
 import com.example.android3dz7teamproect.base.BaseFragment
 import com.example.android3dz7teamproect.databinding.FragmentPokemonBinding
-import com.example.android3dz7teamproect.model.PokemonModel
-import com.example.android3dz7teamproect.model.PokemonResponce
 import com.example.android3dz7teamproect.ui.adapter.PokemonAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -34,7 +30,7 @@ class PokemonFragment :
 
     override fun setupObserve() {
         lifecycleScope.launch {
-            viewModel.fetchPokemon1().observe(viewLifecycleOwner) {
+            viewModel.fetchPokemon().observe(viewLifecycleOwner) {
                 pokemonAdapter.submitList(it.results)
             }
         }
